@@ -11,14 +11,15 @@ class ImageData:
 train = r"D:\project\GIT\手写数字识别第一场\data\train.npy"
 test = r"D:\project\GIT\手写数字识别第一场\data\test.npy"
 
-arr = np.load(train, allow_pickle=True)
+arr = np.load(test, allow_pickle=True)      # (42000, 2)
 
-print(arr[17].images.shape)
-print(arr[17].label)
 
-arr = np.load(train, allow_pickle=True)
-print(arr[17].images)
-print(arr[17].label)
+# print(arr[17].images.shape)
+# print(arr[17].label)
+
+# arr = np.load(train, allow_pickle=True)
+# print(arr[17].images)
+# print(arr[17].label)
 #
 # cv2.imshow("arr", arr[79].images.reshape(28, 28))
 # cv2.waitKey(0)
@@ -29,20 +30,22 @@ print(arr[17].label)
 
 
 from src.sripts.configs.Config import Config
-train_data_path = Config.train_data_path
-train_data_npy_path = Config.train_data_npy_path
+test_data_path = Config.test_data_path
+# train_data_npy_path = Config.test_data_npy_path
 
-# 读取本地 CSV 文件
-df = pd.read_csv(train_data_path)
+# # 读取本地 CSV 文件
+df = pd.read_csv(test_data_path)
 data = df.to_numpy()
 
-data = [data[i, 0] for i in range(data.shape[0])]
 
-
-# print(data)
-print(max(data))
-print(min(data))
-print(len(data))
+#
+# data = [data[i, 0] for i in range(data.shape[0])]
+#
+#
+# # print(data)
+# print(max(data))
+# print(min(data))
+# print(len(data))
 
 
 

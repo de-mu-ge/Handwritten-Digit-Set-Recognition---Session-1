@@ -16,6 +16,8 @@ class Config:
     train_data_npy_path: Path = BASE_DIR / "data/train.npy"
     test_data_npy_path: Path = BASE_DIR / "data/test.npy"
 
+    output_dir: Path = BASE_DIR / "data/submission.csv"
+
     # --------weight---------
     epochs: int = 50
     # batch_size: int = 32
